@@ -1,0 +1,15 @@
+<div class="container">
+<form [formGroup]="signInForm" (ngSubmit)="onSignIn()" class="needs-validation">
+  <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" formControlName="email" id="email" class="form-control" required>
+      <!-- You can add additional Bootstrap classes here if needed, e.g., 'mb-2' for bottom margin -->
+  </div>
+  <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" formControlName="password" id="password" class="form-control" required>
+      <!-- You can add additional Bootstrap classes here if needed, e.g., 'mb-2' for bottom margin -->
+  </div>
+  <button type="submit" [disabled]="!signInForm.valid" class="btn btn-primary">Sign In</button>
+</form>
+</div>
